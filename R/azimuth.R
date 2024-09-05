@@ -22,6 +22,7 @@ NULL
 RunAzimuth.Seurat <- function(
   query,
   reference,
+  homolog,
   annotation.levels = NULL,
   umap.name = "ref.umap",
   do.adt = FALSE,
@@ -75,7 +76,7 @@ RunAzimuth.Seurat <- function(
   query <- ConvertGeneNames(
     object = query,
     reference.names = rownames(x = reference),
-    homolog.table = 'https://seurat.nygenome.org/azimuth/references/homologs.rds'
+    homolog.table = homolog
   )
 
   # Calculate nCount_RNA and nFeature_RNA if the query does not
