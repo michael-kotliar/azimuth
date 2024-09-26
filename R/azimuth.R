@@ -797,7 +797,7 @@ ClusterPreservationScore <- function(query, ds.amount) {
 #'
 #' @export
 #'
-ValidateAzimuthReference <- function(object, ad.name = "AzimuthReference") {
+ValidateAzimuthReference <- function(object, ad.name = "Azimuth::AzimuthReference") {
   if (!inherits(x = Tool(object = object, slot = ad.name), what = "AzimuthData")) {
     stop ("Reference must contain an AzimuthData object in the tools slot.")
   }
